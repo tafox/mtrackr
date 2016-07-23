@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mood: MyString
+  emotion: MyString
+  stability: MyString
+  focus: MyString
+
+two:
+  mood: MyString
+  emotion: MyString
+  stability: MyString
+  focus: MyString

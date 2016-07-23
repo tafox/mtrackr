@@ -1,0 +1,21 @@
+<h1>Record a new mood</h1>
+
+<%= form_for @mood, url: {action: "create"}, html: {class: "mood_form"} do |f| %>
+  <%= f.label :mood %>
+  <%= f.select :mood, 
+    [['Manic', 'manic'],
+    ['Hypomanic','hypomanic'],
+    ['Good','good'],
+    ['Neutral','neutral'],
+    ['Bad','bad'],
+    ['Mildly Depressed','mildly depressed'],
+    ['Very Depressed','very depressed']]
+  %><br>
+  <%= f.label :emotion %>
+  <%= f.text_field :emotion %><br>
+  <%= f.label :stability %>
+  <%= f.text_field :stability %><br>
+  <%= f.label :focus %>
+  <%= f.text_field :focus %><br><br>
+  <%= f.submit "Log Mood"%>
+<% end %>

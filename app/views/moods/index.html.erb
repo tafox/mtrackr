@@ -1,0 +1,30 @@
+<h1>View All Moods</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mood</th>
+      <th>Emotion</th>
+      <th>Stability</th>
+      <th>Focus</th>
+    </tr>
+  </thead>
+
+  <% @moods.each do |mood| %>
+    <tr>
+      <td><%= mood.mood %></td>
+      <td><%= mood.emotion %></td>
+      <td><%= mood.stability %></td>
+      <td><%= mood.focus %></td>
+      <td><%= link_to 'Show', mood %></td>
+      <td><%= link_to 'Edit', edit_mood_path(mood) %></td>
+      <td><%= link_to 'Destroy', mood_path(mood),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+<br>
+
+<%= link_to 'Log another Mood', new_mood_path %>
